@@ -34,7 +34,7 @@ app.get('/', (req, res) => {
 // Ejemplo para verificar que si está cambiado como es el request del Backend
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(cors());
+app.use(cors({ origin: "https://server-amatista.vercel.app/"}));
 app.use(cookieParser())
 app.use('/User', RouteUser)
 app.use('/Materia', RouteMaterias)
